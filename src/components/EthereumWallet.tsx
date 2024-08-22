@@ -14,7 +14,6 @@ const EthereumWallet: React.FC<EthereumWalletProps> = ({ mnemonic }) => {
 
     const generateWallet = async (e: React.MouseEvent<HTMLButtonElement>): Promise<void> => {
         e.preventDefault();
-
         try {
             const seed = await mnemonicToSeed(mnemonic);
             const derivationPath = `m/44'/60'/${currentIndex}'/0/0`;
@@ -39,9 +38,12 @@ const EthereumWallet: React.FC<EthereumWalletProps> = ({ mnemonic }) => {
                     generateWallet(e);
                     setCurrentIndex((prevIndex) => prevIndex + 1);
                 }}
+
+                className='px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500'
             >
                 Generate Wallet
             </button>
+            <br></br>
 
             <div>
                 {privateKeys.map((p, index) => (
