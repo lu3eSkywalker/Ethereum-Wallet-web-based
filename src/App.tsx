@@ -10,6 +10,7 @@ import Design from './components/Tailwind/Design';
 import EnterMnemonics from './components/EnterMnemonics';
 import EnterPassPhrase from './components/EnterPassPhrase';
 import MakeAPassphrase from './components/MakeAPassphrase';
+import Accordian from './components/Tailwind/Accordian';
 
 const App = () => {
   const [encryptedMnemonicExists, setEncryptedMnemonicExists] = useState<boolean>(false);
@@ -42,6 +43,8 @@ const App = () => {
         <Route path='/entermnemonics' element={<EnterMnemonics />} />
         <Route path='/enterpassphrase' element={<EnterPassPhrase />} />
         <Route path='/setpassphrase' element={<MakeAPassphrase />} />
+
+        <Route path='/accordion' element={<Accordian />} />
       </Routes>
     </div>
   );

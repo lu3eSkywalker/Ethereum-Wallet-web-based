@@ -3,7 +3,6 @@ import { generateMnemonic, mnemonicToSeedSync } from 'bip39';
 import { Wallet, HDNodeWallet } from 'ethers';
 import { Buffer } from 'buffer';
 import CryptoJS from 'crypto-js';
-import EthereumWallet from './EthereumWallet';
 import EthereumWallet2 from './EthereumWallet2';
 import EnterPassPhrase from './EnterPassPhrase';
 
@@ -86,9 +85,6 @@ const Mnemonics = ({passkey}: any) => {
                     </button>
 
                       }
-
-
-
                 </div>
               </div>
 </>
